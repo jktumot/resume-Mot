@@ -9,7 +9,7 @@
     
 }
 body {
-    background: #2b3b30;
+    background: #454b47;
     font-size: 14px;
     line-height: 22px;
     color: #000000;
@@ -23,11 +23,13 @@ body {
     width: 800px;
     height: auto;
     display: flex;
-    margin: 50px auto;
+    margin: 0 auto;
 }
+
+/*--------------------------------------===LEFT===-----------------------------------*/
 .resume .resume_left {
     width: 280px;
-    background: #106322;
+    background:linear-gradient(to right,#106322 98%, rgb(255, 255, 255) 100%);
 }
 .resume .resume_left .my_photo {
     width: 280px;
@@ -45,11 +47,9 @@ body {
 .resume .title {
     margin-bottom: 20px;
 }
-  
 .resume .resume_left .bold {
     color: #fff;
 }
-  
 .resume .resume_left .regular {
     color: #bbffb1;
 }
@@ -58,15 +58,13 @@ body {
     margin-bottom: 10px;
     align-items: center;
 }
-.resume .item {
+.resume_left .item {
     padding: 25px 0;
-    border-bottom: 2px solid #bbffb1;
+    border-bottom: 3px solid #bbffb1;
 }
-.resume .resume_left .item:last-child,
-.resume .resume_right .item:last-child {
-  border-bottom: 0px;
+.resume .resume_left .item:last-child{
+    border-bottom: 0px;
 }
-
 .resume .resume_left ul li .icon {
     width: 35px;
     height: 35px;
@@ -78,23 +76,24 @@ body {
     position: relative;
 }
 .resume .icon i,
-.resume .resume_right .resume_hobby ul li i {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
+.resume .resume_right ul li i {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
 }
 .resume .resume_left ul li .data {
     color: #bbffb1;
 }
 .resume_left .data a{
-    color: rgb(14, 29, 189);
+    color: #bbffb1;
     text-decoration: none;
 }
 .resume_left .data a:hover{
     color: yellow;
     text-decoration: navy;
+    text-shadow: 0 0 20px yellow;
 }
 .resume .resume_left ul li:last-child {
     margin-bottom: 0;
@@ -132,10 +131,19 @@ body {
     color: #fff;
     margin-bottom: 3px;
 }
-/*----------RIGHT-----------*/
+.resume_left .github a{
+    text-decoration: none;
+    color: #bbffb1;
+}
+.resume_left .github a:hover{
+    color: yellow;
+    text-decoration: navy;
+    text-shadow: 0 0 20px yellow;
+}
+/*----------------------------------===RIGHT===----------------------------------------*/
 .resume .resume_right {
     width: 520px;
-    background: rgb(145, 169, 147);
+    background: rgb(255, 255, 255);
     padding: 25px;
 }
 .resume_right .red_stroke{
@@ -147,8 +155,12 @@ body {
 }
 .resume .resume_right .resume_work ul,
 .resume .resume_right .resume_edu ul {
-  padding-left: 40px;
-  overflow: hidden;
+    padding-left: 40px;
+    overflow: hidden;
+}
+.resume_right .item {
+    padding: 25px 0;
+    border-bottom: 3px solid #106322;
 }
 .resume .resume_right ul li {
     position: relative;
@@ -164,29 +176,32 @@ body {
 .resume .resume_right ul li:last-child .info {
     margin-bottom: 0;
 }
+.resume .resume_right .item:last-child {
+    border-bottom: 0px;
+  }
 .resume_work ul li:before,
 .resume_edu ul li:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -25px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  border: 2px solid #bbffb1;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid #106322;
 }
 .resume .resume_right .semi-bold{
     font-size: 20px;
     font-weight: 500;
 }
 .resume_work ul .system_admin:after{
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: -21px;
-  width: 2px;
-  height: 154px;
-  background: #bbffb1;
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 100px;
+    background: #106322;
 }
 .resume_work ul .manager:after{
     content: "";
@@ -194,8 +209,8 @@ body {
     top: 14px;
     left: -21px;
     width: 2px;
-    height: 196px;
-    background: #bbffb1;
+    height: 155px;
+    background: #106322;
 }
 .resume_work ul .acting:after{
     content: "";
@@ -204,29 +219,105 @@ body {
     left: -21px;
     width: 2px;
     height: 150px;
-    background: #bbffb1;
+    background: #106322;
 }
 .resume .resume_right .resume_edu ul li:after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: -21px;
-  width: 2px;
-  height: 110px;
-  background: #bbffb1;
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 113px;
+    background: #106322;
 }
 .resume_edu .bold{
     margin-bottom: 20px;
 }
-.resume_left .sertificate_pic{
+
+/*---------------------------------===Sertificate_CARUSEL===----------------------------------*/
+.sertificate{
+    padding-top: 50px;
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    background:linear-gradient(to right,#106322 34.3%, rgb(255, 255, 255) 35%);
 }
-.pic{
-    margin: 6px;
-    cursor: zoom-in;
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
+.mySlides {
+    display: none;
+}
+.mySlides .ser_pic{
+    width: 654px;
+    height: auto;
+    border: 2px solid #106322;
+}
+.prev, .next {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position:static;
+    width: auto;
+    margin: 25px 10px;
+    padding: 16px;
+    color: rgb(244, 241, 241);
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s ease;
+    border-radius: 12px 3px 3px 12px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 12px 12px 3px;
+    color: #106322;
+}
+
+.prev:hover {
+    background-color: #ffffff71;
+}
+.next:hover{
+    background-color: #1063226a;
+}
+.point_nav{
+    background:linear-gradient(to right,#106322 34.3%, rgb(255, 255, 255) 35%);
+    margin:auto;
+    padding-top: 10px;
+    width: 800px;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 15px;
+    background-color:#15842d;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    border: 3px solid rgb(249, 247, 247);
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+/*----------------------------------===WORK===----------------------------------*/
+
+/*----------------------------------===ADAPTIVE===------------------------------*/
 @media (max-width: 736px) {
     .resume {
         height: auto;
@@ -234,6 +325,25 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .resume .resume_left {
+        background:#106322;
+    }
+    .sertificate{
+        background:#106322;
+    }
+    .dot{
+        background-color:#093613;
+    }
+    .active, .dot:hover {
+        background-color: #65d180;
+      }
+    .next{
+        color: #ffffff;
+    }
+    .next:hover{
+        background-color: #ffffff71;
+        
+    } 
 }
 
 @media (max-width: 667px) {
@@ -243,29 +353,43 @@ body {
     }
     .resume .resume_left {
         width: 460px;
-        
     }
     .resume .resume_right {
-        width: 460px;
-        
+        width: 460px; 
     }
+    .sertificate{
+        width: 390px;
+    } 
+    .slideshow-container{
+        max-width: 390px;
+    }
+    .mySlides .ser_pic{
+        width: 245px;
+        height: auto;
+    }   
 }
 @media (max-width: 568px) {
     .resume {
-        width: 370px;
+        width: 390px;
         flex-direction: column;
     }
     .resume .resume_left {
-        width: 370px;
-        
+        width: 390px;
     }
     .resume .resume_right {
-        width: 370px;
+        width: 390px;
     }
     .resume .resume_left .resume_content {
         margin: auto;
         padding: 0 55px;
     }
+    .slideshow-container{
+        max-width: 320px;
+    }
+    .mySlides .ser_pic{
+        width: 245px;
+        height: auto;
+    } 
     .resume .resume_left .my_photo {
         width: 260px;
         height: auto;
@@ -279,126 +403,41 @@ body {
         left: -21px;
         width: 2px;
         height: 175px;
-        background: #bbffb1;
-      }
-      .resume_work ul .manager:after{
-          content: "";
-          position: absolute;
-          top: 14px;
-          left: -21px;
-          width: 2px;
-          height: 240px;
-          background: #bbffb1;
-      }
-      .resume_work ul .acting:after{
-          content: "";
-          position: absolute;
-          top: 14px;
-          left: -21px;
-          width: 2px;
-          height: 170px;
-          background: #bbffb1;
-      }
-      .resume .resume_right .resume_edu ul li:after {
+        background: #106322;
+    }
+    .resume_work ul .manager:after{
         content: "";
         position: absolute;
         top: 14px;
         left: -21px;
         width: 2px;
-        height: 155px;
-        background: #bbffb1;
-      }
-}
-
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: rgb(188, 11, 11);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+        height: 195px;
+        background: #106322;
+    }
+    .resume_work ul .acting:after{
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: -21px;
+        width: 2px;
+        height: 170px;
+        background: #106322;
+    }
+    .resume .resume_right .resume_edu ul li:after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: -21px;
+        width: 2px;
+        height: 135px;
+        background: #106322;
+    }
+    .point_nav{
+        width: 390px;
+        background: #106322;
+    }
+    .dot{
+        margin: 0 3px;
+    }
+    
 }
